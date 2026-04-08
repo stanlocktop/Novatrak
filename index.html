@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand-text" href="#">
@@ -21,6 +22,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#carousel-section">Огляд</a></li>
         <li class="nav-item"><a class="nav-link" href="#catalog">Каталог</a></li>
         <li class="nav-item"><a class="nav-link" href="#advantages">Переваги</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacts">Контакти</a></li>
@@ -32,6 +34,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="row align-items-center gy-5">
@@ -51,7 +54,7 @@
         </div>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-val">140+</div>
+            <div class="hero-stat-val">23+</div>
             <div class="hero-stat-label">Моделей</div>
           </div>
           <div>
@@ -68,6 +71,7 @@
   </div>
 </section>
 
+<!-- STATS BAND -->
 <div class="stats-band">
   <div class="container">
     <div class="row text-center gy-4 gx-2 justify-content-center">
@@ -91,9 +95,52 @@
   </div>
 </div>
 
+<!-- MARQUEE BAND -->
+<div class="marquee-band">
+  <div class="marquee-inner" id="marqueeInner">
+    <div class="marquee-item"><span>✦</span> НОВАТРАК</div>
+    <div class="marquee-item"><span>◆</span> ОФІЦІЙНИЙ ДИЛЕР</div>
+    <div class="marquee-item"><span>✦</span> ЛІЗИНГ ДО 60 МІСЯЦІВ</div>
+    <div class="marquee-item"><span>◆</span> СЕРВІС 24/7</div>
+    <div class="marquee-item"><span>✦</span> ДОСТАВКА ПО УКРАЇНІ</div>
+    <div class="marquee-item"><span>◆</span> ГАРАНТІЙНЕ ОБСЛУГОВУВАННЯ</div>
+    <div class="marquee-item"><span>✦</span> ПРЕМІАЛЬНА АГРОТЕХНІКА</div>
+    <div class="marquee-item"><span>◆</span> ТЕРНОПІЛЬ</div>
+  </div>
+</div>
+
+<!-- ═══════════ CAROUSEL SECTION ═══════════ -->
+<section id="carousel-section" class="d-none d-lg-block">
+  <div class="container">
+    <div class="row align-items-end mb-4 gy-3 scroll-reveal">
+      <div class="col-lg-7">
+        <div class="section-kicker">Огляд техніки</div>
+        <h2 class="section-title">ВИБІР ЛІДЕРІВ</h2>
+        <p class="section-desc">Топові моделі для сучасного агробізнесу — від компактних до флагманських.</p>
+      </div>
+    </div>
+
+    <div class="carousel-wrap scroll-reveal" style="--delay:100ms">
+      <!-- Slides rendered by JS -->
+      <div id="carouselTrack"></div>
+
+      <!-- Controls -->
+      <div class="carousel-controls">
+        <button class="carousel-arrow" onclick="carouselPrev()" aria-label="Попередній">&#8592;</button>
+        <div id="carouselDots"></div>
+        <button class="carousel-arrow" onclick="carouselNext()" aria-label="Наступний">&#8594;</button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="carousel-progress" id="carouselProgress"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CATALOG ═══════════ -->
 <section id="catalog">
   <div class="container">
-    <div class="row align-items-end mb-5 gy-3">
+    <div class="row align-items-end mb-5 gy-3 scroll-reveal">
       <div class="col-lg-7">
         <div class="section-kicker">Каталог техніки</div>
         <h2 class="section-title">НАШІ МОДЕЛІ</h2>
@@ -103,20 +150,20 @@
         <a href="#contacts" class="btn-outline-custom">Запросити повний прайс</a>
       </div>
     </div>
-    <div class="row g-4" id="productsContainer">
-      </div>
+    <div class="row g-3" id="productsContainer"></div>
   </div>
 </section>
 
+<!-- ═══════════ ADVANTAGES ═══════════ -->
 <section id="advantages">
   <div class="container">
     <div class="row align-items-center gy-4">
-      <div class="col-lg-5">
+      <div class="col-lg-5 scroll-reveal reveal-left">
         <div class="section-kicker">Переваги</div>
         <h2 class="section-title">ДИЗАЙН І<br>НАДІЙНІСТЬ</h2>
         <p class="section-desc">Основа концепції — поєднання інженерної строгості та брендової виразності. Темний фон, контрастні акценти, єдина лаконічна типографіка.</p>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 scroll-reveal reveal-right" style="--delay:100ms">
         <div class="adv-grid">
           <div class="adv-card reveal">
             <div class="adv-icon">
@@ -152,14 +199,15 @@
   </div>
 </section>
 
+<!-- ═══════════ CONTACTS ═══════════ -->
 <section id="contacts">
   <div class="container">
     <div class="row gy-4">
-      <div class="col-12 mb-4">
+      <div class="col-12 mb-4 scroll-reveal">
         <div class="section-kicker">Зв'язатись</div>
         <h2 class="section-title">КОНТАКТИ</h2>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 scroll-reveal" style="--delay:80ms">
         <div class="contact-wrap h-100">
           <div class="row gy-4">
             <div class="col-sm-6">
@@ -208,7 +256,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5">
+      <div class="col-lg-5 scroll-reveal" style="--delay:160ms">
         <div class="contact-wrap h-100" style="background:var(--c-dark2);">
           <div class="section-kicker mb-3">ТОВ «НОВАТРАК»</div>
           <p style="font-size:0.85rem;color:var(--c-muted);line-height:1.8;margin-bottom:1.5rem;">
@@ -226,6 +274,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="row align-items-center gy-3">
@@ -235,18 +284,16 @@
       </div>
       <div class="col-md-4">
         <div class="d-flex flex-column gap-1">
-          <a href="#catalog" class="footer-link">Каталог</a>
-          <a href="#advantages" class="footer-link">Переваги</a>
-          <a href="#contacts" class="footer-link">Контакти</a>
         </div>
       </div>
       <div class="col-md-3 text-md-end">
-        <div class="footer-copy">© 2025 ТОВ «НОВАТРАК»<br>Всі права захищені</div>
+        <div class="footer-copy">© 2026 ТОВ «НОВАТРАК»<br>Всі права захищені</div>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- MODAL -->
 <div class="modal-backdrop-custom" id="productModal" onclick="closeModal(event)">
   <div class="modal-box" id="modalBox">
     <div class="modal-header-custom">
